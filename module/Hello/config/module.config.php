@@ -75,7 +75,8 @@ return array(
     ),
     'controllers' => array(
         'invokables' => array(
-            'Hello\Controller\Index' => Controller\IndexController::class
+            'Hello\Controller\Index'            =>           Controller\IndexController::class,
+            'Training\Controller\Test'		    =>		 	'Training\Controller\HelloController',
         ),
     ),
     'view_manager' => array(

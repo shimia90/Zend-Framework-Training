@@ -17,7 +17,7 @@ return array(
         'invokables'		=>		array(
             'Training\Controller\Abc'			=>		 	'Training\Controller\AbcController',
             'Training\Controller\Def'			=>		 	'Training\Controller\DefController',
-            'Training\Controller\Test'			=>		 	'Training\Controller\TestGlobalController',
+            'Training\Controller\Test'			=>		 	'Training\Controller\TestDevelopment22GlobalController',
         )
     ),
 );

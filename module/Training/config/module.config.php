@@ -47,8 +47,10 @@ return array(
     ),
 	'controllers'	=>		array(
 		'invokables'		=>		array(
-			'Training\Controller\Index'			=>		 	'Training\Controller\IndexController',
-			'Training\Controller\Config'		=>		 	'Training\Controller\ConfigController'
+			'Training\Controller\Index'			       =>		 	'Training\Controller\IndexController',
+			'Training\Controller\Config'		       =>		 	'Training\Controller\ConfigController',
+		    'Training\Controller\Test'		           =>		 	'Training\Controller\TestController',
+		    'Training\Controller\Autoloader'		   =>		 	'Training\Controller\AutoloaderController',
 		)	
 	),
 	'view_manager'	=>		array(
