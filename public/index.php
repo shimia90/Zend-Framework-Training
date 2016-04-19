@@ -5,7 +5,7 @@
  */
 chdir(dirname(__DIR__));
 
-include 'define.php';
+require 'define.php';
 
 // Decline static file requests back to the PHP built-in webserver
 if (php_sapi_name() === 'cli-server') {
@@ -20,5 +20,4 @@ if (php_sapi_name() === 'cli-server') {
 require 'init_autoloader.php';
 
 // Run the application!
-
 Zend\Mvc\Application::init(require 'config/application.config.php')->run();

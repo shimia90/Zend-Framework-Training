@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <zend_config>
 	<router>
 		<routes>
@@ -12,6 +12,7 @@
 					</defaults>
 				</options>
 			</home>
+			
 			<training>
 				<type>Literal</type>
 				<options>
@@ -46,4 +47,10 @@
 			<ConfigController>Training\Controller\ConfigController</ConfigController>
 		</invokables>
 	</controllers>
+
+
 </zend_config>
+
+
+
+

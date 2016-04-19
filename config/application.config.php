@@ -1,12 +1,4 @@
 <?php
-// development : Hello
-// production  : training hello
-
-$modules     =   array('Training');
-
-if(APPLICATION_ENV == 'production') {
-    $modules[]  =   'Hello';
-}
 /**
  * If you need an environment-specific system or application configuration,
  * there is an example in the documentation
@@ -15,7 +7,9 @@ if(APPLICATION_ENV == 'production') {
  */
 return array(
     // This should be an array of module namespaces used in the application.
-    'modules' => $modules ,
+    'modules' => array(
+        'Hello', 'Training'
+    ),
 
     // These are various options for the listeners attached to the ModuleManager
     'module_listener_options' => array(
@@ -32,7 +26,7 @@ return array(
         // modules are loaded. These effectively override configuration
         // provided by modules themselves. Paths may use GLOB_BRACE notation.
         'config_glob_paths' => array(
-            sprintf('config/autoload/{{,*.}{global,%s,local}.php', APPLICATION_ENV)
+            'config/autoload/{{,*.}global,{,*.}local}.php',
         ),
 
         // Whether or not to enable a configuration cache.
@@ -74,4 +68,3 @@ return array(
    // Should be compatible with Zend\ServiceManager\Config.
    // 'service_manager' => array(),
 );
-

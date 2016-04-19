@@ -8,22 +8,21 @@ use Zend\Mvc\Controller\AbstractActionController;
 
 class IndexController extends AbstractActionController {
 	
-	public function indexAction() {
-		echo __METHOD__;
+	public function indexAction(){
+		echo '<h3 style="color:red;font-weight:bold">' . __METHOD__ . '</h3>';
 		
-		// Disable View
-		// Method 1: return false;
-		// Method 2: return '';
+		// Disable view
+		
+		// Methode 1: return false;
+		// Methode 2: return '';
 		
 		// Disable layout
-		// $viewModel 	=	new ViewModel();
+		// $viewModel	= new ViewModel();
 		// $viewModel->setTerminal(true);
 		// return $viewModel;
 		
-		// Disable Layout & Disable View
-		// Method 1: return $this->getResponse();
-		// Method 2: 
-		return $this->response;
+		// Disable layout & disable view
+		// Methode 1: return $this->getResponse();
+		// return $this->response;
 	}
-		
 }

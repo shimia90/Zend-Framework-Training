@@ -3,11 +3,9 @@
  * Zend Framework (http://framework.zend.com/)
  *
  * @link      http://github.com/zendframework/ZendSkeletonApplication for the canonical source repository
- * @copyright Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright Copyright (c) 2005-2014 Zend Technologies USA Inc. (http://www.zend.com)
  * @license   http://framework.zend.com/license/new-bsd New BSD License
  */
-
-namespace Hello;
 
 return array(
     'router' => array(
@@ -59,8 +57,8 @@ return array(
             'Zend\Cache\Service\StorageCacheAbstractServiceFactory',
             'Zend\Log\LoggerAbstractServiceFactory',
         ),
-        'factories' => array(
-            'translator' => 'Zend\Mvc\Service\TranslatorServiceFactory',
+        'aliases' => array(
+            'translator' => 'MvcTranslator',
         ),
     ),
     'translator' => array(
@@ -75,8 +73,8 @@ return array(
     ),
     'controllers' => array(
         'invokables' => array(
-            'Hello\Controller\Index'            =>           Controller\IndexController::class,
-            'Training\Controller\Test'		    =>		 	'Training\Controller\HelloController',
+            'Hello\Controller\Index' 		=> 'Hello\Controller\IndexController',
+            'Training\Controller\Test'		=> 'Training\Controller\helloController',
         ),
     ),
     'view_manager' => array(
@@ -87,7 +85,7 @@ return array(
         'exception_template'       => 'error/index',
         'template_map' => array(
             'layout/layout'           => __DIR__ . '/../view/layout/layout.phtml',
-            'hello/index/index'		  => __DIR__ . '/../view/hello/index/index.phtml',
+            'hello/index/index' 		=> __DIR__ . '/../view/hello/index/index.phtml',
             'error/404'               => __DIR__ . '/../view/error/404.phtml',
             'error/index'             => __DIR__ . '/../view/error/index.phtml',
         ),

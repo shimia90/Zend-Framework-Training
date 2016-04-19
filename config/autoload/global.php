@@ -13,11 +13,4 @@
 
 return array(
     // ...
-    'controllers'	=>		array(
-        'invokables'		=>		array(
-            'Training\Controller\Abc'			=>		 	'Training\Controller\AbcController',
-            'Training\Controller\Def'			=>		 	'Training\Controller\DefController',
-            'Training\Controller\Test'			=>		 	'Training\Controller\TestGlobalController',
-        )
-    ),
 );
